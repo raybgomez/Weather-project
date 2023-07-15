@@ -1,0 +1,75 @@
+body {
+    font-family: 'DotGothic16', sans-serif;
+    color: whitesmoke;
+    background: black;
+}
+
+.weatherContainer {
+    background: pink;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: flex;
+    flex-direction: column;
+    height: 300px;
+    width: 600px;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+    width: 500px;
+    float: left;
+    border: 10px solid whitesmoke;
+    background: #fff;
+
+}
+
+.weatherIcon {
+    background-color: deepskyblue;
+    flex: 1 100%;
+    height: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+}
+
+.weatherInformation {
+    background: blue;
+    flex: 0 0 30%;
+    height: 40%;
+    display: flex;
+    align-items: center;
+
+}
+
+.temperature {
+    flex: 0 60%;
+    width: 100%;
+    font-size: 65px;
+    display: flex;
+    justify-content: center;
+
+}
+
+.description {
+    flex: 0 10%;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.weatherCondition {
+    text-transform: uppercase;
+    font-size: 55px;
+    font-weight: 100;
+}
+
+.place {
+    font-size: 25px;
+}
+
+img {
+    height: 150px;
+}
