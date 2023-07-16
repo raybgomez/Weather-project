@@ -4,19 +4,40 @@ body {
     background: black;
 }
 
+h1 {
+    padding-left: 5%;
+}
+
+.searchContainer {
+    max-width: 400px;
+    margin: 50px auto
+}
+
+input[type="text"] {
+    display: block;
+    width: calc(100%);
+    font-size: 20px;
+    font-weight: 600;
+    color: #ffffff;
+    background: black;
+    border-bottom: 2px solid #ffffff;
+    border-top: black;
+    border-left: black;
+    border-right: black;
+    font-family: 'DotGothic16';
+
+}
+
 .weatherContainer {
     background: pink;
     position: absolute;
-    top: 50%;
+    top: 55%;
     left: 50%;
     display: flex;
     flex-direction: column;
     height: 300px;
-    width: 600px;
     transform: translate(-50%, -50%);
-    cursor: pointer;
     width: 500px;
-    float: left;
     border: 10px solid whitesmoke;
     background: #fff;
 
