@@ -7,31 +7,33 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DotGothic16&family=Poppins:wght@300&display=swap" rel="stylesheet">
-    <title>Weather Forecast</title>
+    <title>Mr.Puff, the Weather Forecaster</title>
 </head>
 <body>
-    <h1>Let's check your local weather forecast! What's your current location?</h1>
+    <h1>Watch Mr.Puff transform to your local weather forecast! What's your current location?</h1>
     <div class="searchContainer">
         <form action="">
-            <input type="text" name="search" spellcheck="false">
+            <label for="city-input">Enter US City Name</label>
+            <input id="city-input" type="text" name="search" spellcheck="false" title="Please enter only letters and spaces." onkeydown="return /[a-zA-Z ]/i.test(event.key)" required/>
         </form>
-        
     </div>
     <div class="weatherContainer">
         <div class="weatherIcon">
-            <img src="./images/sun.svg" alt="An 8 bit image of the sun">
+            <img src="./images/happy.svg" class="weatherImage">
         </div>
             <div class="weatherInformation">
                 <div class="temperature">
-                    <span class="temp">90&deg;</span>
+                    <span class="temp">Hi!</span>
                 </div>
                 <div class="description">
-                    <div class="weatherCondition">SUNNY</div>
-                    <div class="place">Boston, MA</div>
+                    <div class="weatherCondition">I'm Mr.Puff!</div>
+                    <div id="place"></div>
                 </div>
             </div>
     </div>
+<script src="script.js"></script>
 </body>
+
 </html>
 
 <!-- Next create a search bar to that people can insert their location via html. 
