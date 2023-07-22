@@ -73,7 +73,5 @@ cityInput.addEventListener('keypress', function (e) {
         e.preventDefault();
         checkWeather(cityInputValue);
         document.getElementById('city-input').value = "";
-        // cityInputValue = '';
-
     }
 });
