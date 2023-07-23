@@ -17,6 +17,7 @@ This project was completed for The Code the Dream advanced pre-work assignment.T
 
 [Weather-Project:](https://.github.io/)
 
+
 ## Getting Started
 
 You will need a web browser to view this project. No set up required. Works best on:
@@ -29,8 +30,12 @@ You will need a web browser to view this project. No set up required. Works best
 
 ##### Once you are on the Home Page, you will see a searchbox labeled "Enter US City Name"
 - **Step 1**.- Type in the name of a US city. No need to type in the state.
-- **Step 2**.- Hit the enter key
-- **Step 3**.- Mr.Puff will change into your local weather condition.
+- **Step 2**.- Hit the enter key. City name will display below.
+- **Step 3**.- Current temperature will display at the top of the box.
+- **Step 4**.- Display the weather condition by clicking the "Show Condition" link at the bottom.
+- **Step 5**.- Click "Show Temperature" to display the current temperature again.
+
+
 
 ## Deployed on GitHub Pages
 
