@@ -16,26 +16,29 @@
             <label for="city-input">Enter US City Name</label>
             <input id="city-input" type="text" name="search" spellcheck="false" title="Please enter only letters and spaces." onkeydown="return /[a-zA-Z ]/i.test(event.key)" required/>
         </form>
+        <div id="place"></div>
     </div>
     <div class="weatherContainer">
-        <div class="weatherIcon">
-            <img src="./images/happy.svg" class="weatherImage">
+        <div class="temperature">
+            <span id="tempElement" class="temp">Hi!</span>
         </div>
-            <div class="weatherInformation">
-                <div class="temperature">
-                    <span class="temp">Hi!</span>
+        <div class="weatherInformation">
+            <div id="Info">
+                <div class="weatherIcon">
+                    <img src="./images/happy.svg" class="weatherImage">
                 </div>
                 <div class="description">
                     <div class="weatherCondition">I'm Mr.Puff!</div>
-                    <div id="place"></div>
                 </div>
             </div>
+        </div>
+        <div class="links">
+            <a id="showCondition" href="javascript:showCondition()">Show Condition</a>
+            <a id="showTemperature" href="javascript:showTemperature()">Show Temperature</a>
+        </div>
     </div>
+    
 <script src="script.js"></script>
 </body>
 
 </html>
-
-<!-- Next create a search bar to that people can insert their location via html. 
-    then figure out how to do the back end JS for the weather api, 
-    changing the color and image to match the locations weather. -->

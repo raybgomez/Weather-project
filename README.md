@@ -17,7 +17,6 @@ This project was completed for The Code the Dream advanced pre-work assignment.T
 
 [Weather-Project:](https://.github.io/)
 
-
 ## Getting Started
 
 You will need a web browser to view this project. No set up required. Works best on:

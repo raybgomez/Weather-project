@@ -44,7 +44,6 @@ input[type="text"] {
 }
 
 .weatherIcon {
-    background-color: deepskyblue;
     flex: 1 100%;
     height: 60%;
     display: flex;
@@ -62,7 +61,16 @@ input[type="text"] {
 
 }
 
+#Info {
+    display: flex;
+}
+
+a {
+    color: #fff;
+}
+
 .temperature {
+    background-color: deepskyblue;
     flex: 0 60%;
     width: 100%;
     font-size: 65px;
@@ -79,6 +87,17 @@ input[type="text"] {
     height: 100%;
     justify-content: center;
     align-items: center;
+}
+
+.links {
+    display: flex;
+    flex-direction: column;
+    background-color: blue;
+    text-align: center;
+}
+
+.links a {
+    visibility: hidden;
 }
 
 .weatherCondition {

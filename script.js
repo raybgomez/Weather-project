@@ -3,6 +3,24 @@ const geocodeApiURL = "https://geocoding-api.open-meteo.com/v1/search?count=1&la
 
 const cityInput = document.getElementById('city-input');
 const displayCity = document.getElementById('place');
+const conditionElement = document.getElementById('Info');
+const tempElement = document.getElementById('tempElement');
+const showConditionLink = document.getElementById('showCondition');
+const showTemperatureLink = document.getElementById('showTemperature');
+
+function showCondition() {
+    tempElement.style.visibility = 'hidden';
+    conditionElement.style.visibility = 'visible';
+    showConditionLink.style.visibility = 'hidden';
+    showTemperatureLink.style.visibility = 'visible';
+}
+
+function showTemperature() {
+    tempElement.style.visibility = 'visible';
+    conditionElement.style.visibility = 'hidden';
+    showConditionLink.style.visibility = 'visible';
+    showTemperatureLink.style.visibility = 'hidden';
+}
 
 
 async function checkWeather(city) {
@@ -16,11 +34,6 @@ async function checkWeather(city) {
     const tempArray = data.hourly.temperature_2m;
     const currentHour = new Date().getHours();
     const weatherCodeNumber = data.daily.weathercode;
-
-
-    console.log(data);
-    console.log(geoData);
-    console.log(geocodeLong);
 
     document.querySelector(".temp").innerHTML = Math.round(tempArray.splice(currentHour, 1)) + "°F";
 
@@ -64,6 +77,7 @@ async function checkWeather(city) {
 
     document.querySelector(".weatherCondition").innerHTML = conditionOfWeather();
 
+    showTemperature();
 }
 
 cityInput.addEventListener('keypress', function (e) {
