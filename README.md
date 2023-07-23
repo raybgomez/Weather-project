@@ -13,12 +13,7 @@ This project was completed for The Code the Dream advanced pre-work assignment.T
 - HTML5
 - CSS3
 
-## Live Demo
-
-[Weather-Project:](https://.github.io/)
-
-
-## Getting Started
+## Prerequisites
 
 You will need a web browser to view this project. No set up required. Works best on:
 
@@ -26,20 +21,22 @@ You will need a web browser to view this project. No set up required. Works best
 - Google Chrome
 - Safari
 
+## Live Demo
+
+<https://raybgomez.github.io/Weather-project/>
+
+Deployed on [GitHub Pages](https://pages.github.com/) 
+
 ### Usage
 
-##### Once you are on the Home Page, you will see a searchbox labeled "Enter US City Name"
-- **Step 1**.- Type in the name of a US city. No need to type in the state.
-- **Step 2**.- Hit the enter key. City name will display below.
-- **Step 3**.- Current temperature will display at the top of the box.
-- **Step 4**.- Display the weather condition by clicking the "Show Condition" link at the bottom.
-- **Step 5**.- Click "Show Temperature" to display the current temperature again.
+Click on the above live demo link. You will see a searchbox labeled "Enter US City Name"
+- **Step 1**. Type in the name of a US city. No need to type in the state.
+- **Step 2**. Hit the enter key. City name will display below.
+- **Step 3**. Current temperature will display at the top of the box.
+- **Step 4**. Display the weather condition by clicking the "Show Condition" link at the bottom.
+- **Step 5**. Click "Show Temperature" to display the current temperature again.
 
-
-
-## Deployed on GitHub Pages
-
-Deployed on [GitHub Pages](https://pages.github.com/)  
+ 
 
 ## Acknowledgement
 
@@ -52,4 +49,3 @@ Contributions, issues, and feature requests are welcome!
 ## Show your support
 
 Show your love by hitting the ⭐️ button, I'd really appreciate it.
- -->
