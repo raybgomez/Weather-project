@@ -2,7 +2,7 @@
 
 ### This is an 8-bit weather forecast website featuring a fictional character, Mr.Puff, as your weather man.
 
-<div align="center"><img width="1280" alt="websiteScreenShot" src="https://github.com/raybgomez/Weather-project/assets/117782111/2657bac1-4643-4cb2-9239-d318a1bde100">/div>
+<div align="center"><img width="1280" alt="websiteScreenShot" src="https://github.com/raybgomez/Weather-project/assets/117782111/2657bac1-4643-4cb2-9239-d318a1bde100"></div>
 
 
 This project was completed for The Code the Dream advanced pre-work assignment.The aim of the assignment was to build a website using a given selection of public APIs. I choose Open-Meteo - a weather API.
