@@ -7,6 +7,11 @@ const conditionElement = document.getElementById('Info');
 const tempElement = document.getElementById('tempElement');
 const showConditionLink = document.getElementById('showCondition');
 const showTemperatureLink = document.getElementById('showTemperature');
+const tempTextElement = document.querySelector(".temp");
+const weatherIcon = document.querySelector(".weatherImage");
+const weatherCondition = document.querySelector(".weatherCondition");
+const cityInputElement = document.getElementById('city-input');
+
 
 function showCondition() {
     tempElement.style.visibility = 'hidden';
@@ -21,7 +26,42 @@ function showTemperature() {
     showConditionLink.style.visibility = 'visible';
     showTemperatureLink.style.visibility = 'hidden';
 }
+// Note: For the two weather code functions, the results are not specific and will display a general weather condition
+function weatherCodeToIcon(weatherCodeNumber) {
+    if (weatherCodeNumber == 0) {
+        return "images/sun.svg";
+    } else if (weatherCodeNumber <= 2) {
+        return "images/partlyCloudy.svg";
+    } else if (weatherCodeNumber == 3) {
+        return "images/cloudy.svg";
+    } else if (weatherCodeNumber <= 67) {
+        return "images/rain.svg";
+    } else if (weatherCodeNumber <= 77) {
+        return "images/snow.svg";
+    } else if (weatherCodeNumber <= 99) {
+        return "images/thunderstorm.svg";
+    } else {
+        return "images/happy.svg";
+    }
+}
 
+function weatherCodeToCondition(weatherCodeNumber) {
+    if (weatherCodeNumber == 0) {
+        return "Sunny";
+    } else if (weatherCodeNumber <= 2) {
+        return "Partly Cloudy";
+    } else if (weatherCodeNumber == 3) {
+        return "Cloudy"
+    } else if (weatherCodeNumber <= 67) {
+        return "Raining"
+    } else if (weatherCodeNumber <= 77) {
+        return "Snowing"
+    } else if (weatherCodeNumber <= 99) {
+        return "Thunderstorm"
+    } else {
+        return 'Error (Look Outside!)'
+    }
+}
 
 async function checkWeather(city) {
 
@@ -35,48 +75,11 @@ async function checkWeather(city) {
     const currentHour = new Date().getHours();
     const weatherCodeNumber = data.daily.weathercode;
 
-    document.querySelector(".temp").innerHTML = Math.round(tempArray.splice(currentHour, 1)) + "°F";
-
-    const weatherIcon = document.querySelector(".weatherImage");
-    if (weatherCodeNumber == 0) {
-        weatherIcon.src = "images/sun.svg";
-    } else if (weatherCodeNumber <= 2) {
-        weatherIcon.src = "images/partlyCloudy.svg";
-    } else if (weatherCodeNumber == 3) {
-        weatherIcon.src = "images/cloudy.svg";
-    } else if (weatherCodeNumber <= 67) {
-        weatherIcon.src = "images/rain.svg";
-    } else if (weatherCodeNumber <= 77) {
-        weatherIcon.src = "images/snow.svg";
-    } else if (weatherCodeNumber <= 99) {
-        weatherIcon.src = "images/thunderstorm.svg";
-    } else {
-        weatherIcon.src = "images/happy.svg";
-    }
-
-    function conditionOfWeather() {
-
-        if (weatherCodeNumber == 0) {
-            return "Sunny";
-        } else if (weatherCodeNumber <= 2) {
-            return "Partly Cloudy";
-        } else if (weatherCodeNumber == 3) {
-            return "Cloudy"
-        } else if (weatherCodeNumber <= 67) {
-            return "Raining"
-        } else if (weatherCodeNumber <= 77) {
-            return "Snowing"
-        } else if (weatherCodeNumber <= 99) {
-            return "Thunderstorm"
-        } else {
-            return 'Look Outside!'
-        }
-    }
-
-    conditionOfWeather();
-
-    document.querySelector(".weatherCondition").innerHTML = conditionOfWeather();
-
+    const tempValue = Math.round(tempArray.splice(currentHour, 1));
+    const tempText = tempValue + "°F";
+    tempTextElement.innerHTML = tempText;
+    weatherIcon.src = weatherCodeToIcon(weatherCodeNumber);
+    weatherCondition.innerHTML = weatherCodeToCondition(weatherCodeNumber);
     showTemperature();
 }
 
@@ -86,6 +89,6 @@ cityInput.addEventListener('keypress', function (e) {
         displayCity.innerHTML = cityInputValue;
         e.preventDefault();
         checkWeather(cityInputValue);
-        document.getElementById('city-input').value = "";
+        cityInputElement.value = "";
     }
 });
